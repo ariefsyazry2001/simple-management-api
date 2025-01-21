@@ -46,7 +46,7 @@ Ensure you have the following installed on your system:
 #### 1. Clone the Repository
 ```bash
 git clone https://github.com/ariefsyazry2001/simple-task-api.git
-cd simple-task-api
+cd simple-task-api ```
 
 ### 2. Install Dependencies
 
