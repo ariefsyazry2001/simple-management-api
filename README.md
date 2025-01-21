@@ -29,11 +29,7 @@ This is a Laravel-based REST API designed to manage tasks efficiently. It includ
 
 ## Features
 - **Task Management**: Create, read, update, and delete tasks.
-- **User Authentication**: Secure access with authentication.
-- **Pagination**: Paginate responses for task lists.
-- **Validation**: Validate input data for secure operations.
-- **Elegant ORM**: Uses Laravel Eloquent for database interactions.
-
+  
 ---
 
 ## Requirements
