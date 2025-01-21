@@ -98,12 +98,6 @@ php artisan serve
 
 The API will be available at `http://127.0.0.1:8000`.
 
-### 7. (Optional) Compile Frontend Assets
-If the project includes frontend assets, compile them using:
-```bash
-npm run dev
-```
-
 ---
 
 ## API Endpoints
