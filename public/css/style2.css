@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #1EAE98; /* Soft Blue */
+    --hover-color: #116356; /* Darker Blue */
+    --secondary-color: #6c757d; /* Muted Blue-Gray */
+    --background-gradient: linear-gradient(135deg, #D8B5FF, #1EAE98); /* Gradient */
+    --text-color: #0B1215; /* Dark Gray */
+    --text-light: #ffffff; /* White text for contrast */
+    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Soft shadow color */
+
+    --table-row-bg: #ffffff; /* Light background for table rows */
+    --table-hover-bg: rgba(30, 174, 152, 0.15); /* Hover effect background */
+    --table-border-color: #e5e5e5; /* Light gray border */
+}
+
+/* General Body Styles */
+html,body {
+    font-family: 'Figtree', Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--hover-color);
+}
+
+/* Container Styling */
+.container-task {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px var(--box-shadow-color);
+}
+
+/* Headings */
+h1,
+h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.task-header {
+    font-size: 2rem;
+}
+
+/* Button Styles */
+.btn {
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #4CAF50;
+    color: var(--text-light);
+}
+
+.btn-warning:hover {
+    background-color: #45a049;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: var(--text-light);
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* Form Styles */
+.form-label {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(30, 174, 152, 0.5);
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 10px;
+    font-family: 'Figtree', sans-serif;
+    background-color: var(--table-row-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+}
+
+.table thead {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: left;
+    font-weight: bold;
+}
+
+.table thead th {
+    padding: 12px 15px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--table-border-color);
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--table-hover-bg);  
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}  
+
+
+/* Validation Errors */
+.text-danger {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.badge-new {
+    font-size: 0.875rem;
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.badge-in-progress {
+    font-size: 0.875rem;
+    background-color: #ffc107; /* Yellow */
+    color: black;
+}
+
+.badge-completed {
+    font-size: 0.875rem;
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* Pagination */
+.pagination {
+    justify-content: center;
+}
+
+.pagination .page-link {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-task {
+        padding: 20px;
+    }
+
+    .task-header {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,92 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1EAE98; /* Soft Blue */
+    --hover-color: #116356; /* Darker Blue */
+    --secondary-color: #6c757d; /* Muted Blue-Gray */
+    --background-gradient: linear-gradient(135deg, #D8B5FF,#1EAE98); /* Gradient */
+    --text2-color: #fff; /* White text for contrast */
+    --text-color: #0B1215; /* White text for contrast */
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Figtree', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-gradient); /* Gradient background */
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    backdrop-filter: blur(10px); 
+} 
+
+/* Headings */
+.container h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color:  var(--text-color); /* Slightly muted white */
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text2-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.login {
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
