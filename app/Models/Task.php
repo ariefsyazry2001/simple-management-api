@@ -10,13 +10,15 @@ class Task extends Model
         'title',
         'description',
         'status',
-        'deadline', // Added deadline to allow mass assignment
+        'deadline', 
+        'task_created_date', 
     ];
 
     /**
      * Attribute casting.
      */
     protected $casts = [
-        'deadline' => 'datetime', // Ensure deadline is treated as a datetime instance
+        'deadline' => 'datetime', 
+        'task_created_date' => 'datetime', // Add this
     ];
 }

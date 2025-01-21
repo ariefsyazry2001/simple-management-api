@@ -17,7 +17,8 @@ class TaskController extends Controller
     public function fetchTasks()
     {
         return response()->json(Task::all()->map(function ($task) {
-            $task->deadline = $task->deadline ? $task->deadline->format('Y-m-d') : null;
+            $task->task_created_date = \Carbon\Carbon::parse($task->task_created_date)->format('d-m-Y');
+            $task->deadline = \Carbon\Carbon::parse($task->deadline)->format('d-m-Y');
             return $task;
         }));
     }

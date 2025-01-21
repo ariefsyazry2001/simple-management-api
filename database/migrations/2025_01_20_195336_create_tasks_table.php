@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('status')->default(StatusType::NEW->value);
-            $table->date('deadline')->default(now());
+            $table->date('task_created_date')->default(now()->format('Y-m-d')); // New column
+            $table->date('deadline')->default(now()->format('Y-m-d'));
             $table->timestamps();
         });
 
@@ -28,7 +29,8 @@ return new class extends Migration
                 'title' => 'Task 1',
                 'description' => 'This is the first task.',
                 'status' => StatusType::NEW->value,
-                'deadline' => now()->addDays(7)->toDateString(),
+                'task_created_date' => now()->format('Y-m-d'),
+                'deadline' => now()->addDays(7)->format('Y-m-d'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -36,7 +38,8 @@ return new class extends Migration
                 'title' => 'Task 2',
                 'description' => 'This is the second task.',
                 'status' => StatusType::IN_PROGRESS->value,
-                'deadline' => now()->addDays(14)->toDateString(),
+                'task_created_date' => now()->format('Y-m-d'),
+                'deadline' => now()->addDays(14)->format('Y-m-d'),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -44,7 +47,8 @@ return new class extends Migration
                 'title' => 'Task 3',
                 'description' => 'This is the third task.',
                 'status' => StatusType::COMPLETED->value,
-                'deadline' => now()->addDays(30)->toDateString(),
+                'task_created_date' => now()->format('Y-m-d'),
+                'deadline' => now()->addDays(30)->format('Y-m-d'),    
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
