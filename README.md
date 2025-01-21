@@ -48,3 +48,26 @@ Ensure you have the following installed on your system:
 git clone https://github.com/ariefsyazry2001/simple-task-api.git
 cd simple-task-api
 
+### 2. Install Dependencies
+
+Install PHP and Composer dependencies:
+```bash
+composer install
+
+Install Node.js dependencies:
+```bash
+npm install
+
+### 3. Configure Environment
+1. Copy the .env.example file to .env:
+```bash
+cp .env.example .env
+
+2. Open .env and configure the following:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password 
