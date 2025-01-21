@@ -70,7 +70,7 @@ npm install
 
 1. Copy the `.env.example` file to `.env`:
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 2. Open the `.env` file and update the database credentials:
